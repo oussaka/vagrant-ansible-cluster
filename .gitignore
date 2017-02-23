@@ -1,0 +1,7 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Vagrant template
+.vagrant/
+### Ansible template
+*.retry
+### JetBrains template
+.idea/
