@@ -1,0 +1,19 @@
+---
+
+- name: dev
+  vb_box: puphpet/debian75-x64
+  ip: 192.168.56.100
+  ram: 512
+  vcpu: 1
+
+- name: recette
+  vb_box: puphpet/debian75-x64
+  ip: 192.168.56.101
+  ram: 512
+  vcpu: 1
+
+- name: mysql-servers
+  vb_box: puphpet/debian75-x64
+  ip: 192.168.56.102
+  ram: 512
+  vcpu: 1
