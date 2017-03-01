@@ -12,7 +12,7 @@
   ram: 512
   vcpu: 1
 
-- name: mysql-servers
+- name: dbserver
   vb_box: puphpet/debian75-x64
   ip: 192.168.56.102
   ram: 512

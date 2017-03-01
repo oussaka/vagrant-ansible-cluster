@@ -1,0 +1,9 @@
+---
+
+- hosts: dbserver
+  vars_files:
+    - ../group_vars/dbserver
+  sudo: yes
+
+  roles:
+    - mysql

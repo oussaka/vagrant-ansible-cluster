@@ -47,6 +47,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
       # Disable default synced folder
       # srv.vm.synced_folder '.', '/vagrant', disabled: true
+      srv.vm.synced_folder '.', '/vagrant', :mount_options => ["fmode=666"]
 
       # Configure the VM with RAM and CPUs per machines.yml (VirtualBox)
       srv.vm.provider 'virtualbox' do |vb, override|
@@ -57,5 +58,15 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     end # config.vm.define
   end # machines.each
+
+  config.vm.provision "ansible_local" do |ansible|
+    ansible.playbook        = "playbook/main.yml"
+    ansible.verbose         = true
+    ansible.install         = true
+    # ansible.limit           = "all"
+    # ansible.inventory_path  = "inventory"
+    # ansible.limit         = ['localhost']
+    # ansible.sudo           = true
+  end
 
 end # Vagrant.configure

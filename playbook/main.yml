@@ -1,0 +1,6 @@
+---
+# file: playbook/main.yml
+
+#- include: common.yml
+- include: mysql.yml
+#- include: nginx.yml

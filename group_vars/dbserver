@@ -1,0 +1,12 @@
+---
+
+mysql_databases:
+  - name: foobar
+    collation: "utf8_general_ci"        # optional, defaults to "utf8_general_ci"
+    encoding: "utf8"                    # optional, defaults to "utf8"
+
+mysql_users:
+  - name: dbuser
+    pass: dbpass
+    priv: "*.*:ALL"                     # optional, defaults to "*.*:ALL"
+    host: "%"                           # optional, defaults to "localhost"

@@ -1,0 +1,16 @@
+---
+
+  - name: print to stdout
+    hosts: all
+    tasks:
+      - shell: /bin/echo "Test ---->>"
+
+  - name: test playbook execution
+    hosts: localhost
+    connection: local
+    user: root
+    gather_facts: no
+    tasks:
+    - shell: echo 'test'
+      register: foo
+    - debug: msg="the echo was {{ foo.stdout }}"
