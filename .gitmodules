@@ -1,3 +1,6 @@
 [submodule "playbook/roles/mysql"]
 	path = playbook/roles/mysql
 	url = git@github.com:ANXS/mysql.git
+[submodule "playbook\\roles\\mysql"]
+	path = playbook\\roles\\mysql
+	url = git@github.com:ANXS/mysql.git
