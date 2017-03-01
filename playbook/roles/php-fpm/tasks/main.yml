@@ -1,0 +1,31 @@
+- name: install php7.0-fpm and all associated modules
+  action: apt name={{ item }} state=installed
+  with_items: 
+    - php7.0-fpm
+    - php-common
+    - php-curl
+    - php-gd
+    - php-mysql
+
+
+- name: service run php7.0-fpm
+  service: name=php7.0-fpm state=started
+
+
+- name: copy across php-fpm.conf
+  action: template src="{{ item }}" dest="/etc/php/7.0/fpm/{{ item }}"
+  with_items: 
+     - php-fpm.conf
+     - php.ini
+  notify: 
+    - restart php7.0-fpm service
+
+
+- name: pool config
+  action: template src="{{ item }}" dest="/etc/php/7.0/fpm/pool.d/{{ item }}"
+  with_items: 
+     - www.conf
+     # - www1.conf
+     # - www2.conf
+  notify: 
+    - restart php7.0-fpm service
