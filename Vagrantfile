@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 # Specify Vagrant version and Vagrant API version
-Vagrant.require_version '>= 1.6.0'
+Vagrant.require_version '>= 1.8.0'
 VAGRANTFILE_API_VERSION = '2'
 
 # Read YAML file with VM details (box, CPU, and RAM)
@@ -17,7 +17,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
   # `vagrant box outdated`. This is not recommended.
-  # config.vm.box_check_update = false
+  config.vm.box_check_update = true
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
@@ -60,9 +60,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end # machines.each
 
   config.vm.provision "ansible_local" do |ansible|
-    ansible.playbook        = "playbook/main.yml"
+    ansible.playbook        = "ansible/playbook/main.yml"
     ansible.verbose         = true
-    ansible.install         = true
+    # ansible.raw_arguments   = " -vvvv"
+    # ansible.install         = true
     # ansible.limit           = "all"
     # ansible.inventory_path  = "inventory"
     # ansible.limit         = ['localhost']

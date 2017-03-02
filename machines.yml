@@ -1,19 +1,19 @@
 ---
 
 - name: dev
-  vb_box: puphpet/debian75-x64
+  vb_box: puphpet/ubuntu1604-x64
   ip: 192.168.56.100
   ram: 512
   vcpu: 1
 
 - name: recette
-  vb_box: puphpet/debian75-x64
+  vb_box: puphpet/ubuntu1604-x64
   ip: 192.168.56.101
   ram: 512
   vcpu: 1
 
 - name: dbserver
-  vb_box: puphpet/debian75-x64
+  vb_box: puphpet/ubuntu1604-x64
   ip: 192.168.56.102
   ram: 512
   vcpu: 1
