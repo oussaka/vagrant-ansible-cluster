@@ -1,6 +1,6 @@
-[submodule "playbook/roles/mysql"]
-	path = playbook/roles/mysql
+[submodule "ansible/playbook/roles/mysql"]
+	path = ansible/playbook/roles/mysql
 	url = git@github.com:ANXS/mysql.git
-[submodule "playbook\\roles\\mysql"]
-	path = playbook\\roles\\mysql
-	url = git@github.com:ANXS/mysql.git
+[submodule "ansible/playbook/roles/mariadb"]
+	path = ansible/playbook/roles/mariadb
+	url = git@github.com:deimosfr/ansible-mariadb.git
