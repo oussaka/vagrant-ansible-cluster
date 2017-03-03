@@ -1,5 +1,0 @@
----
-ssl_crt: unused
-ssl_key: unused
-
-send_file: off

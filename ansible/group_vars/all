@@ -1,0 +1,23 @@
+---
+
+foo: bar
+user_name: lamp
+web_server_user: www-data
+
+php_modules:
+  - php-xml
+  - php7.0-curl
+
+composer_global_packages:
+  phpunit:
+    name: "phpunit/phpunit"
+    version: "^5.4.0"
+  codeception:
+    name: "codeception/codeception"
+    version: "~2.2.7"
+  phpspec:
+    name: "phpspec/phpspec"
+    version: "~3.2.2"
+  phpcs:
+    name: "squizlabs/php_codesniffer"
+    version: "~2.7.1"

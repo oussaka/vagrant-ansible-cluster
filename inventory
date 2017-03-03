@@ -5,4 +5,4 @@
 # recette         ansible_host=192.168.56.101 ansible_private_key_file=/vagrant/.vagrant/machines/recette/virtualbox/private_key
 # dbserver        ansible_host=192.168.56.102 ansible_private_key_file=/vagrant/.vagrant/machines/dbserver/virtualbox/private_key
 
-default ansible_ssh_host=127.0.0.1 ansible_ssh_port=2222
+default ansible_host=127.0.0.1 ansible_port=2222
